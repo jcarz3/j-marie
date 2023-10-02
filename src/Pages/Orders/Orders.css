@@ -1,0 +1,101 @@
+.orders-container {
+  padding: 50px;
+}
+
+.orders-container .ant-space-vertical {
+  width: 100%;
+}
+
+.orders-container .ant-typography {
+  margin-bottom: 20px;
+}
+
+.orders-container .ant-table-pagination {
+  margin-top: 50px;
+  text-align: right;
+}
+
+.orders-container .ant-table-pagination .ant-pagination-item-active a {
+  color: #20ff18;
+}
+
+.orders-container .ant-table-pagination .ant-pagination-item-active {
+  border-color: #20ff18;
+}
+
+.orders-container .ant-table-pagination .ant-pagination-item-active a:hover {
+  color: #20ff18;
+}
+
+.orders-container .ant-table-pagination .ant-pagination-item:hover a {
+  color: #20ff18;
+}
+
+.orders-container .ant-table-pagination .ant-pagination-item:hover {
+  border-color: #20ff18;
+}
+
+.orders-container .ant-table-pagination .ant-pagination-disabled a {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.orders-container
+  .ant-table-pagination
+  .ant-pagination-disabled
+  .ant-pagination-item-link:hover {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.orders-container
+  .ant-table-pagination
+  .ant-pagination-disabled
+  .ant-pagination-item:hover {
+  border-color: #4cb143;
+}
+
+.orders-container .ant-table-thead > tr > th {
+  background-color: #1d8a26;
+  font-weight: bold;
+  text-align: center;
+}
+
+.orders-container .ant-table-tbody > tr > td {
+  text-align: center;
+}
+
+.orders-container .ant-popconfirm-message {
+  color: #37ff0f;
+}
+
+.orders-container .ant-popover-buttons .ant-btn-primary {
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+.orders-container .ant-popover-buttons .ant-btn-primary:hover {
+  background-color: #ff7875;
+  border-color: #ff7875;
+}
+
+.orders-container .ant-table-tbody > tr.ant-table-row-selected > td {
+  background-color: #19b655;
+}
+
+.orders-container .ant-table-tbody > tr.ant-table-row-selected:hover > td {
+  background-color: #19b655;
+}
+.actions {
+  color: #20ff18;
+}
+.button-primary {
+  background-color: #077711;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background-color: #00ff0d;
+}

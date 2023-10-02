@@ -1,0 +1,47 @@
+.dashboard-container {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 50px;
+}
+
+.dashboard-icon {
+  font-size: 25px;
+}
+
+.dashboard-card {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #75af78;
+}
+
+.recent-orders-table {
+  margin-top: 20px;
+  /* background-color: #1d8a26; */
+}
+/* .recent-orders-table :hover{
+    background-color: #1d8a26;
+
+
+  } */
+.dashboard-chart {
+  width: 600px;
+  height: 300px;
+  margin-top: 20px;
+}
+.dashboard-container .ant-typography-title {
+  margin-bottom: 10px;
+}
+.dashboard-container .ant-space-horizontal {
+  margin-bottom: 20px;
+}
+.dashboard-card .ant-space-horizontal {
+  display: flex;
+  align-items: center;
+}
+/* .dashboard-container .ant-space-item{
+    background-color: #75af78;
+  } */

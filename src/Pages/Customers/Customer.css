@@ -1,0 +1,27 @@
+.customers-container {
+  margin-top: 20px;
+}
+
+.customers-container .ant-typography-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.customers-container .ant-table {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.customers-container .ant-table-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.customers-container .ant-table-pagination {
+  margin-top: 20px;
+  text-align: right;
+}
