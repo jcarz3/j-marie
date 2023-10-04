@@ -67,6 +67,7 @@ export const cartItems = [
 
 export const items = [
   {
+    id: 1,
     name: "Tosilog",
     price: 2.0,
     quantity: 20,
@@ -74,6 +75,7 @@ export const items = [
     img: silog1,
   },
   {
+    id: 2,
     name: "Pork Tapsilog",
     price: 22.0,
     quantity: 20,
@@ -81,6 +83,7 @@ export const items = [
     img: silog2,
   },
   {
+    id: 3,
     name: "Bangsilog",
     price: 25.0,
     quantity: 10,
@@ -88,6 +91,7 @@ export const items = [
     img: silog3,
   },
   {
+    id: 4,
     name: "Longsilog",
     price: 12.0,
     quantity: 20,
@@ -95,6 +99,7 @@ export const items = [
     img: silog4,
   },
   {
+    id: 5,
     name: "Hotsilog",
     price: 10.0,
     quantity: 10,
@@ -102,6 +107,7 @@ export const items = [
     img: silog4,
   },
   {
+    id: 6,
     name: "Champorado",
     price: 10.0,
     quantity: 10,
@@ -109,6 +115,7 @@ export const items = [
     img: champorado,
   },
   {
+    id: 7,
     name: "Mami",
     price: 30.0,
     quantity: 10,
@@ -116,6 +123,7 @@ export const items = [
     img: mami,
   },
   {
+    id: 8,
     name: "Lugaw ni Jesmarie",
     price: 50.0,
     quantity: 10,

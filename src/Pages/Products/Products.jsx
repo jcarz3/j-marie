@@ -52,6 +52,24 @@ const Products = () => {
     setOpenEdit(false);
   };
 
+  //delete dialog
+  const [openDelete, setOpenDelete] = useState(false);
+  const [removeId, setRemoveId] = useState(0);
+  const handleClickDelete = (itemId) => {
+    setRemoveId(itemId);
+    setOpenDelete(true);
+  };
+
+  const handleRemoveProduct = () => {
+    console.log("categorize", categorize);
+    setCategorize(categorize.filter((c) => c.id !== removeId));
+    setOpenDelete(false);
+  };
+
+  const handleCloseDelete = () => {
+    setOpenDelete(false);
+  };
+
   // card when hover
   const [hoveredCardIndex, setHoveredCardIndex] = useState(null);
   const handleCardHover = (index) => {
@@ -102,10 +120,6 @@ const Products = () => {
   const handleEditProduct = (productId) => {
     // Logic to handle editing a product
     console.log(`Editing product with ID: ${productId}`);
-  };
-
-  const handleRemoveProduct = (productId) => {
-    setProducts(products.filter((product) => product.id !== productId));
   };
 
   return (
@@ -168,6 +182,7 @@ const Products = () => {
                   <RiDeleteBin6Line
                     title="delete"
                     className="text-[20px] hover:text-green-900"
+                    onClick={() => handleClickDelete(item.id)}
                   />
                 </div>
               )}
@@ -180,10 +195,12 @@ const Products = () => {
               </div>
             </div>
           ))}
-          <div className="group h-[250px] shadow-md group hover:shadow-inner relative flex flex-col p-2 hover:bg-[#f1f1f1] w-[190px] cursor-pointer border-gray-100 bg-white">
+          <div
+            onClick={handleClickAdd}
+            className="group h-[250px] shadow-md group hover:shadow-inner relative flex flex-col p-2 hover:bg-[#f1f1f1] w-[190px] cursor-pointer border-gray-100 bg-white"
+          >
             <BsPlusLg
               title="Add Bayanihan"
-              onClick={handleClickAdd}
               className="group-hover:bg-[#ffffff] group-hover:shadow-xl rounded-full text-4xl text-[#3a772e] bg-transparent  absolute left-[40%] top-[40%]"
             />
           </div>
@@ -295,6 +312,30 @@ const Products = () => {
               </button>
               <button className="px-2 border shadow-md hover:scale-105 duration-200 rounded-md bg-[#436cc5] text-white">
                 Save
+              </button>
+            </div>
+          </DialogContent>
+        </Dialog>
+
+        {/*delete  dialog */}
+        <Dialog open={openDelete} onClose={handleCloseDelete} maxWidth="sm">
+          <DialogTitle>Delete Menu</DialogTitle>
+          <DialogContent className=" p-[20px] mb-2">
+            <div>
+              <h1>Are you sure you want to Delete this item</h1>
+            </div>
+            <div className="flex justify-end gap-2 mt-4 mx-[20px]">
+              <button
+                onClick={handleCloseDelete}
+                className="px-2 border hover:scale-105 duration-200 shadow-sm rounded-md bg-[#f1f1f1]"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleRemoveProduct}
+                className="px-2 border shadow-md hover:scale-105 duration-200 rounded-md bg-[#436cc5] text-white"
+              >
+                Confirm
               </button>
             </div>
           </DialogContent>
