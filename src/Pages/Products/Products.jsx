@@ -108,19 +108,19 @@ const Products = () => {
     }
   };
 
-  const handleAddProduct = () => {
-    const newProduct = {
-      id: products.length + 1,
-      name: `Product ${products.length + 1}`,
-      price: 0,
-    };
-    setProducts([...products, newProduct]);
-  };
+  // const handleAddProduct = () => {
+  //   const newProduct = {
+  //     id: products.length + 1,
+  //     name: `Product ${products.length + 1}`,
+  //     price: 0,
+  //   };
+  //   setProducts([...products, newProduct]);
+  // };
 
-  const handleEditProduct = (productId) => {
-    // Logic to handle editing a product
-    console.log(`Editing product with ID: ${productId}`);
-  };
+  // const handleEditProduct = (productId) => {
+  //   // Logic to handle editing a product
+  //   console.log(`Editing product with ID: ${productId}`);
+  // };
 
   return (
     <div class="flex xl:flex-row lg:flex-row flex-col w-full p-4 gap-5 min-h-screen scroll-hidden">
@@ -284,11 +284,9 @@ const Products = () => {
                   defaultValue={editItems.category}
                   className="border border-[#818181] rounded-sm outline-none "
                 >
-                  <option value="Silog Meals">Silog Meals</option>
-                  <option value="Lugaw & Mami">Lugaw & Mami</option>
-                  <option value="Sinabaw & Others">Sinabaw & Others</option>
-                  <option value="AdOns & Beverages">AdOns & Beverages</option>
-                  <option value="Bialo & Bilao">Bilao & Bilao Combo</option>
+                  {items.map((i) => (
+                    <option value="Silog Meals">{i.category}</option>
+                  ))}
                 </select>
                 <input
                   type="number"
@@ -306,11 +304,11 @@ const Products = () => {
             <div className="flex justify-end gap-2 mt-4 mx-[20px]">
               <button
                 onClick={handleCloseEdit}
-                className="px-2 border hover:scale-105 duration-200 shadow-sm rounded-md bg-[#f1f1f1]"
+                className="px-[10px] py-[2px] border hover:scale-105 duration-200 shadow-sm rounded-md bg-[#f1f1f1]"
               >
                 Cancel
               </button>
-              <button className="px-2 border shadow-md hover:scale-105 duration-200 rounded-md bg-[#436cc5] text-white">
+              <button className="px-[10px] py-[2px] border shadow-md hover:scale-105 duration-200 rounded-md bg-[#436cc5] text-white">
                 Save
               </button>
             </div>
@@ -324,10 +322,10 @@ const Products = () => {
             <div>
               <h1>Are you sure you want to Delete this item</h1>
             </div>
-            <div className="flex justify-end gap-2 mt-4 mx-[20px]">
+            <div className="flex justify-end gap-2 mt-4 mx-[10px]">
               <button
                 onClick={handleCloseDelete}
-                className="px-2 border hover:scale-105 duration-200 shadow-sm rounded-md bg-[#f1f1f1]"
+                className="px-2 py-[2px] border hover:scale-105 duration-200 shadow-sm rounded-md bg-[#f1f1f1]"
               >
                 Cancel
               </button>
